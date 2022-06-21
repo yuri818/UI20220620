@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인요소와 블록요소</title>
+    <style>
+        div {
+            display: block;
+            width: 300px;
+            height: 300px;
+            border: 3px solid black;
+            background-color: aquamarine;
+        }
+        /*  #뒤에는 id를 적는다. 
+            .뒤에는 클래스를 적는다.
+        */
+        div#d_2 {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            border: 3px solid black;
+            background-color: orangered;
+        }
+        span {
+            display: block;
+            width: 200px;
+            height: 150px;
+            background-color: blanchedalmond;
+        }
+        .s2 {
+            background-color: rgb(112, 79, 230);
+        }
+        .s3 {
+            background-color: yellowgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <div>Div1</div>
+    <div id="d_2" class="cd_2">Div2</div>
+    <span>Span1</span>
+    <span class="s2">Span2</span>
+    <span class="s3">Span3</span>
+    <h1>블록요소 h1</h1>
+</body>
+</html>
+
+<!--
+    span태그는 폭과 높이를 주어도 먹지 않는다.
+    자체 크기를 가지지 않기 때문에 크기를 지정할 수 없다.
+    span크기는 글자요소이다. ( 왼쪽에서 오른쪽으로 )수평적으로 쌓인다.
+    남는 크기는 줄어든다.
+
+    블록요소는 크기를 변경할 수 있다.
+    display 속성에 inline-block를 주면 두 가지를 다 사용가능함.
+    display에 none을 주면 화면에 안보임. jf.setVisible(flase); 의 느낌
+    
+    css는 헤드 안에 화면에 보여지는 건 body 안에
+    
+    헤드안에는 title, 빈태그는 meta태그 등이 있다.
+    
+
+    div태그는 상자요소이다
+    자체 폭과 높이를 가지고 있다
+    남는 크기가 존재한다.
+
+-->
