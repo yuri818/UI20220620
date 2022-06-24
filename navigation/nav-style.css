@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Titan+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  /* 내가 작업하는 것 시각적으로 보여줌 */
+  /* border: 1px solid rgba(183, 59, 221, 0.774); */
+}
+
+ul {
+  /* 목록 앞에 구슬 사라지게 해줌 */
+  list-style: none;
+}
+
+/* 밑줄 사라지게 하고싶어 */
+a {
+  text-decoration: none;
+}
+/* 배경색 바꿀래 */
+body {
+  background-color: black;
+}
+/* 상단메뉴 공통작업 
+2.회색 밑줄생김 - 메뉴아래 구분선
+3.flex - 아래쪽으로 쌓이던 것이 오른쪽으로 옮겨감
+4.justify 문장쓰면 간격이 벌어진다
+*/
+header {
+  width: 100%; /* 1번 */
+  border-bottom: 1px solid #aaaa;/* 2 */
+  display: flex;/* 3 */
+  justify-content: space-between; /* 4. 양 끝에 배치하면서 균등하게 */
+  /* 상단 메뉴들 제각각이라 맞출래 */
+  top: 0px;
+  left: 0px;
+  align-items: center; /* 얘 때문에 맞춰짐 */
+  font-family: 'Fascinate', cursive;
+  position: absolute;
+  z-index: 2;
+}
+/* 여기서부터는 이름만 적어도 되는데 DOM Tree구조 보라고 조상 다 적어줌 */
+/* h1이 또 있을 수 있어 header적어준다 */
+header h1 {
+  font: bold 24px;
+  color: white;
+  margin: 20px 30px;
+}
+
+header .gnb {
+  /* 5. 안쪽에 있는 li들이 좌우배치됨 */
+  display: flex;
+}
+
+/* li들 글씨를 좀 띄어쓰기 하고싶어 */
+header .gnb li {
+  /*6. 위아래-0px 양옆-20px , 바깥쪽으로 공백 주려고 margin*/
+  margin: 0px 20px;
+  font-family: 'Titan One', cursive;
+}
+/* li들 글자 속성 바꾸고 싶어 */
+header .gnb li a {
+  /* li 글자색 바꿀래 */
+  color: white;
+  /* 글자 간격도 바꿀래 */
+  letter-spacing: 2px;
+}
+
+/* 메일과 페북버튼 옆으로가게한다 */
+header .lnb {
+  display: flex;
+}
+
+header .lnb li {
+  margin: 0px 10px;
+}
+/* 이메일과 페북 아이콘 색깔 파->흰 */
+header .lnb li a {
+  font-size: 16px;
+  color: white;
+}
+
+/* 끝 버튼 아이콘 설정 */
+header .btnMenu {
+  font-size: 24px;
+  color: white;
+  /* 처음에는 보이면 안되고 창 크기가 줄어들었을 때 보여지게하기 */
+  display: none;
+}
+
+.camp-bg {
+  width: 100%;
+  height: 100vh;
+}
+
+.video-wrap {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.video-wrap video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* 반응형 웹 처리 */
+/* 위의 문제를 미디어 쿼리로 해결
+  -크기가 1024px로 줄면 중간 자바, 오라클,..이 사라지고
+   세줄목록이 나오게 해줌
+*/
+@media screen and (max-width: 1024px) {
+  header .gnb {
+    display: none;
+  }
+  header .lnb{
+    display: none;
+  }
+  header .btnMenu {
+    display: block;
+  }
+}
+
