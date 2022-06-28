@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상선택자 사용</title>
+  <link rel="stylesheet" href="./position2.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="left"></div>
+    <div class="right">
+      <p></p>
+    </div>
+    <div class="bottom"></div>
+  </div>
+</body>
+</html>
+
+<!-- 
+  absolute position - 자유로운 요소를 배치 가능 - 좌표값으로 배치가 가능함
+  부모요소에 구애받지 않고 자유롭게 배치 가능
+  CSS의 position 속성은 요소가 화면에 어떻게 배치되는가를 결정함
+  기본값은 static이며
+  relative나 absolute, fixed 등으로 변경이 가능함
+  positiion속성을 static이 아닌 다른 값으로 설정했을때
+  position과 관련된 top, left, bottom, right CSS 속성이 있다.
+
+  absolute의 특징
+  : 부모 요소에 속박되지 않고 독립된 배치 가능
+  : 브라우저 화면(viewport) 상에서 어디든 원하는 위치에 배치 가능
+  : z-index속성을 같이 사용하면 부모 요소 위에 겹쳐서 배치하는 것도 가능함
+  주의
+  : 상위 요소중에 relative인 요소가 있다면 가장 가까운 요소의 내부에서 배치 가능함
+ -->

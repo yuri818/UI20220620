@@ -1,0 +1,52 @@
+@charset 'UTF-8';
+
+.wrap {
+  border: 10px solid black;
+  width: 800px;
+  /* height: 500px; */
+  margin: 100px auto;
+}
+/* 가상선택자는 인라인요소이므로 블록요소로 변경해줌 */
+.wrap:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.left {
+  width: 400px;
+  height: 400px;
+  background-color: cyan;
+  float: left;
+}
+
+.right {
+  width: 400px;
+  height: 400px;
+  background-color: greenyellow;
+  float: right;
+}
+
+.right p {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  /* absolute는 자신의 영역을 무시하고 밖으로 나가게 된다. - relative와 차이점 */
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.bottom {
+  width: 800px;
+  height: 100px;
+  background-color: hotpink;
+  float: left;
+}
+
+/* 
+  위 상태로 실행하면 bottom이 보이지 않는다. 요소 중에 하나라도 float요소가 존재하면
+  float요소가 필요없어도 주어야 화면에 보임
+  따라서 bottom 에서 주석된 부분을 풀어주어야 bottom이 비로소 보인다
+  그런데 wrap이 800이므로 옆으로는 붙지 못하고 left를 주었음에도 아래로 붙음
+*/
