@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+/* 
+  class는 동일한 이름이 여러개 올 수 있다
+  id는 한 페이지 내에 오직 하나만 올 수 있다.
+  개발자들은 class를 더 선호한다.
+*/
+p {
+  border: 3px solid cyan;
+}
+
+p#blue {
+  border: 1px solid blue;
+}
+
+p#red {
+  border: 1px solid red;
+}

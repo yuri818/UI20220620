@@ -1,0 +1,14 @@
+@charset 'UTF-8'; /* 인코딩 타입 설정 */
+div {
+  border: 1px solid red;
+}
+
+/* 문제: 링크에만 테두리 파란색으로 */
+/* 이렇게 하면 양쪽 a가 다 표시 */
+div a {
+  border: 3px solid yellowgreen;
+}
+/* 직계 자손인것만 나타내려면  > 기호 사용 */
+div > a {
+  border: 3px solid blue;
+}
