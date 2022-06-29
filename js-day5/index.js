@@ -23,7 +23,10 @@ window.addEventListener('hashchange', function(){
   // JSON에서 받아온걸 배열로만들기
   const newContent = JSON.parse(ajax.response);
   this.alert('사용자 선택한 뉴스 제목은?'+ newContent.title);
-  console.log(newContent);
+  // console.log(newContent);
+  
+  //insert here- content내용도 추가해줘~
+
 });
 
 // locationHashChanged() {
