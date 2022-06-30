@@ -65,6 +65,12 @@ header .gnb li a {
   letter-spacing: 2px;
 }
 
+/* li들 글자 속성 바꾸고 싶어 */
+header .gnb li.on a {
+  background-color: greenyellow;
+  color: white;
+}
+
 /* 메일과 페북버튼 옆으로가게한다 */
 header .lnb {
   display: flex;
