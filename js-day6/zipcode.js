@@ -51,10 +51,10 @@ function action(dong) {
     // 클릭하면 되도록 a태그를 걸어준다.
     const a = document.createElement('a');
     td.setAttribute('width','90');
-    // a.href=`#${address[i].zipcode}`;
+    // a.href=`#${address[i].zipcode}`; - 단위테스트 용이었음.
+    a.href="javascript:choice('"+address[i].zipcode+"','"+address[i].address+"')";
     a.appendChild(document.createTextNode(`${address[i].zipcode}`));
     td.appendChild(a);
-    a.href="javascript:choice('"+address[i].zipcode+"','"+address[i].address+"')";
     const td2 = document.createElement('td');
     td2.appendChild(document.createTextNode(`${address[i].address}`));
     tr.appendChild(td);
