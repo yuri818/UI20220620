@@ -9,12 +9,23 @@
     function guguDanPrint(p_start, p_end){
       alert(`guguDanPrint 호출 성공! ${p_start} ${p_end}`);
       // 헤더처리
-      
+      document.write("<center><h1>구구단</h1><table border='1' width='60%'><tr>");
       // 단수 처리
-
+      for (let i = p_start; i <= p_end; i++) {
+        document.write("<td bgcolor='green' align='center'><font color='yellow'><b>",i,"단","</b></td>");
+        //insert here
+        if(i == p_end) document.write("</tr><tr>");
+      }
       // 계산하기
-      
+      for (let k = p_start; k <= p_end; k++) {
+        document.write("<td bgcolor='yellow' align='center'><font color='green'><b>");
+        for (let j = 1; j < 9; j++) {
+          document.write(k,"*",j,"=",k*j,"</br>");
+          }
+          document.write("</b></font></td>");
+      }
       // 바닥처리
+      document.write("</tr></table></center>");
     }
   </script>
 </head>
