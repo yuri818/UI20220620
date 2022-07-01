@@ -1,0 +1,14 @@
+.container {
+  width: 400px;
+  height: 500px;
+  border: 2px solid red;
+  margin: 10px;
+}
+
+.innerpage {
+  margin: 10px;
+  width: 350px;
+  height: 450px;
+  border: 1px solid red;
+  border-radius: 5px;
+}

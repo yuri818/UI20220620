@@ -1,0 +1,54 @@
+* {
+  border: 1px solid red;
+  /* padding을 주었을 때 범위 벗어나지 않도록 기본적으로 이 속성을 주고 시작 */
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+ul.gnb {
+  float: left;
+  background-color: greenyellow;
+}
+
+ul.gnb>li {
+  /* 동글뱅이 없앨것이다. */
+  list-style-type: none;
+  float: left;
+  padding-left: 16px;
+}
+
+ul.rank {
+  float: right;
+  background-color: yellow;
+}
+
+ul.rank>li {
+  list-style-type: none;
+  float: right;
+  padding-left: 16px;
+}
+.left {
+  float: left;
+  background-color: red;
+  width: 740px;
+  height: 428px;
+  padding: 1px;
+}
+.right {
+  float: right;
+  background-color: blue;
+  width: 332px;
+  height: 428px;
+  padding: 1px;
+}
+
+.footer {
+  background-color: yellow;
+  height: 80px;
+}

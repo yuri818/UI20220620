@@ -1,0 +1,13 @@
+.redbox {
+  width: 100px;
+  height: 100px;
+  /* display: block; */
+  background-color: red;
+  float: right;
+  margin: 10px 20px;
+  /* text-align: left; */
+}
+
+/* 
+  float: right;는 요소를 오른쪽부터 채우겠다는 의미이다.
+*/

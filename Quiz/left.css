@@ -1,0 +1,19 @@
+.box1 {
+  width: fit-content;
+  height: 300px;
+  margin: 10px;
+}
+
+.cat-img {
+  width: 20%;
+  height: 200px;
+  float: left;
+  display: block;
+  border-radius: 50%;
+}
+.content {
+  width: 80%;
+  height: inherit;
+  float: left;
+  font-size: large;
+}

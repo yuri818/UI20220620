@@ -1,0 +1,48 @@
+.menu li {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  background-color: cadetblue;
+  float: left;
+  margin-bottom: 8px;
+}
+
+.right {
+  width: 100px;
+  font-size: 10px;
+  float: right;
+  background-color: yellow;
+  text-align: center;
+}
+
+.div {
+  width: 1080px;
+}
+
+.colorbox {
+  width: 1080px;
+  float: left;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.redbox {
+  width: 740px;
+  height: 428px;
+  background-color: red;
+  float: left;
+  margin: 1px;
+}
+.bluebox {
+  width: 332px;
+  height: 428px;
+  background-color: blue;
+  float: right;
+  margin: 1px;
+}
+
+.yellowbox {
+  width: 1080px;
+  height: 50px;
+  background-color: yellow;
+  clear: both;
+}
