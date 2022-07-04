@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Titan+One&display=swap');
 
 * {
-  border: 1px solid rgb(255, 201, 201);
+  /* border: 1px solid rgb(255, 201, 201); */
   box-sizing: border-box;
 }
 
@@ -13,6 +13,14 @@ a {
 /* 배경색 바꿀래 */
 body {
   background-color: black;
+}
+
+.container {
+  width: 100%;
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: auto;
+  position: relative;
 }
 
 header {
@@ -52,9 +60,43 @@ header h1 img {
   background-color: blue;
 }
 
+.ghost-btn {
+  /* 버튼 배경을 투명하게 */
+  background-color: transparent;
+  border: 1px solid blue;
+}
+
 .text-wrap {
+  width: 520px;
+  height: 100vh;
+  padding: 240px 20px;
+  left: 0;
+  top: 0;
   position: absolute;
   z-index: 2;
+  color: white;
+}
+
+.text-wrap h2 {
+  color: white;
+  font-size: 64px;
+  line-height: 1.25;
+  margin-bottom: 40px;
+  font-weight: lighter;
+}
+
+.text-wrap h3 {
+  color: white;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.text-wrap p {
+  color: white;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
 .video-wrap {
