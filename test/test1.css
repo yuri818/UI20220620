@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+.fs {
+  position: relative;
+}
+
+.btn-sub {
+  position: relative;
+  left: 150px;
+}
+
+table {
+  width: 100%;
+}
+
+.tb-head {
+  background-color: rgb(255, 176, 139);
+  margin: auto;
+  border: 1px solid black;
+  color: white;
+  height: 30px;
+}
+
+.tb-body {
+  background-color: lightgoldenrodyellow;
+}
+
+.go {
+  background-color: rgb(226, 216, 247);
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.wid {
+  width: 800px;
+}
