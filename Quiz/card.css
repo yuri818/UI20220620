@@ -1,0 +1,80 @@
+* {
+  /* border: 1px solid red; */
+}
+
+
+.container {
+  width: 500px;
+  height: 800px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 2px 10px 0px grey;
+  position: absolute;
+}
+
+.innerpage {
+  margin: 30px;
+  padding: 20px;
+  width: 400px;
+  height: 80%;
+}
+
+.top-icon {
+  width: auto;
+  height: 20px;
+}
+
+.content {
+  color: gray;
+}
+
+.view {
+  width: 300px;
+  height: 20px;
+  background-color: aqua;
+  border-radius: 30px;
+  color: white;
+  font-weight: bolder;
+  position: relative;
+  left: 10%;
+  padding: 20px;
+}
+
+.fb {
+  width: auto;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.fb div {
+  float: left;
+}
+
+.color-container {
+  margin: 30px;
+  width: 440px;
+  height: 40px;
+}
+
+.btn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.bl {
+  background-color: aqua;
+}
+
+.gn {
+  background-color: greenyellow;
+}
+
+.pk {
+  background-color: violet;
+}
+
+.pp {
+  background-color: blueviolet;
+}
