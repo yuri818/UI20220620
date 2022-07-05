@@ -1,0 +1,137 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 패딩값이 너비 값에 포함되어 있게 됨 */
+  box-sizing: border-box;
+  /* border: 1px solid rebeccapurple; */
+}
+
+ul {/* 점 없애줘 목록에서 */
+  list-style: none;
+}
+a { /* 링크에 밑줄 빼줘 */
+  text-decoration: none;
+}
+
+body {
+  background-color: lightcyan;
+}
+
+.wrap {
+  width: 340px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  /* 자기자신의 크기만큼 이동시킴 */
+  transform: translate(-50%,-50%);
+}
+
+.wrap .profile {
+  width: 100%;
+  text-align: center;
+}
+
+.wrap .profile img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.wrap .profile h1 {
+  font: bold 22px/1 "arial";
+  color: #555555;
+  margin-bottom: 5px;
+}
+
+.wrap .profile p {
+  font: bold 12px/1 "arial";
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+/* a태그를 버튼으로 만드는 과정 */
+.wrap .profile .btnView {
+  display: block;
+  width: 180px;
+  height: 32px;
+  /* 굵은 글씨로 12px, 높이는 32px 글씨체 arial*/
+  font: bold 12px/32px "arial";
+  margin: 0px auto 20px;
+  color: white;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+  background-color: aqua;
+  border-radius: 16px;
+}
+
+.wrap .contact {
+  margin-bottom: 25px;
+}
+
+.wrap .contact li {
+  width: 100%;
+  padding: 10px 0px;
+  /* 아래쪽에 줄이 생기게 해줌 */
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* 마지막 애한테는 줄 안할래 */
+.wrap .contact li:last-child {
+  border-bottom: none;
+}
+
+.wrap .contact li i {
+  width: 20%;
+  text-align: center;
+  color: #555555;
+  font-size: 14px;
+}
+
+.wrap .contact li span {
+  font: 11px/1 "orbitron";
+  color: #555555;
+  letter-spacing: 1px; /* 글자 간 간격 */
+}
+
+.wrap .others {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrap .others a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0px 10px;
+  /* 반투명도 설정하기 */
+  opacity: 0.4;
+}
+
+/* 첫 번째만 내 원래 색상으로 해줘! 반투명 시러!@ */
+.wrap .others a.on {
+  opacity: 1;
+}
+
+/* a의 첫번째 요소를 이 색으로 바꿔줄래? */
+.wrap .others a:nth-of-type(1) {
+  background-color: aqua;
+}
+.wrap .others a:nth-of-type(2) {
+  background-color: greenyellow;
+}
+.wrap .others a:nth-of-type(3) {
+  background-color: violet;
+}
+.wrap .others a:nth-of-type(4) {
+  background-color: blueviolet;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
