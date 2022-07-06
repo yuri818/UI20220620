@@ -1,0 +1,63 @@
+/* .container {
+  list-style: none;
+  border-radius: 10px;
+
+}
+
+.contlist img {
+  float: left;
+}
+
+.contlist li {
+  float: left;
+} */
+
+.container {
+  /* width: 50%; */
+  padding: 0.2em;
+}
+
+.videos{
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  list-style: none;
+  margin: 0px;
+  padding-left: 0px;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border: 1px solid lightgrey;
+  /* 마우스를 위에 가져가면 손모양으로 바뀐다 */
+  cursor: pointer;
+  box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.5);
+  flex-grow: 1;
+}
+
+.video:hover {
+  /* 마우스를 가져갔을 때 약간 오버해서 보여진다. */
+  transform: scale(1.02);
+}
+/* 
+.videos>li{
+  width: 1000px;
+  height: 200px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+} */
+
+.thumbnail{
+  width: 40%;
+  height: 100%;
+  margin: 15px;
+}
+
+.title,
+.channel {
+  /* margin: 10px; */
+  font-size: 0.6rem;
+}

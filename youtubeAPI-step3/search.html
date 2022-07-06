@@ -4,15 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YoutubeAPI - step1[mostPopulars]</title>
-  <script src="./mostPop.js" defer></script>
-  <link rel="stylesheet" href="./mostPop.css">
+  <title>YoutubeAPI - step3[mostPopulars]</title>
+  <script src="./search.js" defer></script>
+  <link rel="stylesheet" href="./search.css">
 </head>
 <body>
-  <!-- js와 연동할 것이므로 id로 준다. -->
-  <div id="root">
-    
-  </div>
+  <header class="header">
+    <div class="logo">
+      <img src="./img/logo.png" alt="youtubelogo">
+    </div>
+    <input class="input" type="search" placeholder="검색할 키워드를 입력하세요." onkeypress="handleEnter()">
+    <button onclick="searchList()">
+      <img src="./img/search.png" alt="" class="buttonImg">
+    </button>
+  </header>
+  <div id="root"></div>
 </body>
 </html>
 <!-- 
