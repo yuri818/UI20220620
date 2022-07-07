@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YoutubeAPI - step3[mostPopulars]</title>
+  <script src="./search.js" defer></script>
+  <link rel="stylesheet" href="./search.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="./img/logo.png" alt="youtubelogo">
+    </div>
+    <input class="input" type="search" placeholder="검색할 키워드를 입력하세요." onkeypress="handleEnter()">
+    <button onclick="searchList()">
+      <img src="./img/search.png" alt="" class="buttonImg">
+    </button>
+  </header>
+  <div id="root"></div>
+</body>
+</html>
+<!-- 
+  html읽어서 DOM Tree 구성 -> 브라우저
+  중간에서 mostPop.js를 만나면 XMLHttpRequest통신 요청이 발생
+  지연상황
+  요청을 한 응답을 받아와야 되니까
+  추가되는 위치는 div 태그 내부 -> innerHTML 사용
+  지연이 발생하면 화면처리가 늦어진다
+  사용자는 닫는다
+  스크립트를 미루고 화면 선처리 -> DOM Tree 구성
+  script defer를 추가한 것이다.
+ -->

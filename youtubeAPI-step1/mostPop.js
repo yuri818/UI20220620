@@ -3,10 +3,10 @@ let content = '';
 const MOST_URL = "https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyDf6r44w-7PJNXRsI56DuRDHn2Lj-RS_w8";
 
 ajax.open("GET", MOST_URL, false);
-ajax.send();
+ajax.send(); // 요청하기 - 지연이 발생할 수 있다 -> 처리가 안되어있다
 
 console.log(ajax.response);
-
+// 동기적 처리
 const result = JSON.parse(ajax.response); //{... itens[{snippet:...}]}
 const items = result.items; //Array 구조체를 가짐
 // console.log(result);
