@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 상대경로 추가하기 -->
+  <!-- DOM Tree를 조작하는 것이므로 순서를 지켜주어야한다 -->
+  <!-- min은 띄어쓰기같은 공백을 없애서 무게감을 줄인 것 -->
+  <script src="../../js/jquery.min.js"></script>
+  <!-- easyUI에 대한 경로는 여기 들어있다 -> 이게 없으면 아무것도 화면에 안나온다. -->
+  <script src="../../js/jquery.easyui.min.js"></script>
+  <link rel="stylesheet" href="../../themes/default/easyui.css">
+  <link rel="stylesheet" href="../../themes/icon.css">
+  <script>
+    function addressList(){
+      // 조회하기 버튼
+      $('#dg_address').datagrid({
+      url:'./address.json'
+      });
+    }
+    // 입력하기 버튼
+    function addressInsert(){
+      $('#dia_insert').dialog('open');
+    }
+  </script>
+</head>
+<body>
+  <table id="dg_address" class="easyui-datagrid"></table>
+  <!-- toolbar -->
+  <div id="tb_address">
+    <a href="javascript:addressList()" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true">조회</a>
+    <a href="javascript:addressInsert()" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">입력</a>
+    <a href="javascript:addressUpdate()" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">수정</a>
+    <a href="javascript:addressDelete()" class="easyui-linkbutton" data-options="iconCls:'icon-cut',plain:true">삭제</a>
+  </div>
+  <script>
+    //window.onload의 느낌
+    $(document).ready(function(){
+      $('#dg_address').datagrid({
+        // post방식이라 get방식으로 바꿔줄랭
+        method:'GET',
+        title:'주소록',
+        columns:[[
+          {field:'name',title:'이름',width:100, align:'center'},
+          {field:'birthday',title:'생일',width:150, align:'center'},
+          {field:'address',title:'주소',width:250, align:'left'}
+        ]],
+        // 버튼 추가할랭
+        toolbar: '#tb_address',
+      });
+      // $('#dd').dialog({
+      //   title: 'My Dialog',
+      //   width: 400,
+      //   height: 200,
+      //   closed: false,
+      //   cache: false,
+      //   href: 'get_content.php',
+      //   modal: true
+      // });
+      // $('#dd').dialog('refresh', 'new_content.php');
+    });
+  </script>
+  <!-- ========================= [주소 등록 다이얼 로그 화면] ================================= -->
+  <div id="dia_insert" class="easyui-dialog" title="My Dialog" style="width:400px;height:200px;"
+        data-options="iconCls:'icon-save',resizable:true,modal:true, closed:true">
+    Dialog Content.
+  </div>
+  <!-- ========================= [] ================================= -->
+</body>
+</html>

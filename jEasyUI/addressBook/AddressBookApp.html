@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 상대경로 추가하기 -->
+  <!-- DOM Tree를 조작하는 것이므로 순서를 지켜주어야한다 -->
+  <!-- min은 띄어쓰기같은 공백을 없애서 무게감을 줄인 것 -->
+  <script src="../../js/jquery.min.js"></script>
+  <!-- easyUI에 대한 경로는 여기 들어있다 -> 이게 없으면 아무것도 화면에 안나온다. -->
+  <script src="../../js/jquery.easyui.min.js"></script>
+  <link rel="stylesheet" href="../../themes/default/easyui.css">
+  <link rel="stylesheet" href="../../themes/icon.css">
+</head>
+<body>
+  <table id="dg_address" class="easyui-datagrid"></table>
+  <script>
+    $('#dg_address').datagrid({
+      // post방식이라 get방식으로 바꿔줄랭
+      method:'GET',
+      title:'주소록',
+      /* 404에러는 url문제이므로 경로 확인하기! */
+      url:'./address.json',
+      columns:[[
+        {field:'name',title:'이름',width:100, align:'center'},
+        {field:'birthday',title:'생일',width:150, align:'center'},
+        {field:'address',title:'주소',width:250, align:'left'}
+      ]],
+      // 버튼 추가할랭
+      toolbar: [{
+        iconCls: 'icon-search',
+        handler: function(){alert('조회')}
+        // -가 구분자로 들어감
+      },'-',{
+        iconCls: 'icon-edit',
+        handler: function(){alert('입력')}
+      },'-',{
+        iconCls: 'icon-reload',
+        handler: function(){alert('수정')}
+      },'-',{
+        iconCls: 'icon-cut',
+        handler: function(){alert('삭제')}
+      }]
+    });
+  </script>
+</body>
+</html>
