@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../public/css/hello.css">
+</head>
+<body>
+  <h1>
+    Hello <% if(name){ %>
+      <span class="name"><%= name%></span>
+    <% } else { %>
+      <span class="stranger">Stranger</span>
+    <% } %>
+  </h1>
+</body>
+</html>
+
+<!-- 
+  자바에서 햇던것처럼 스크립틀릿이용) 
+  ...에는 자바스크립트 문법이 들어가고 %=는 출력할 내용입력
+-->
