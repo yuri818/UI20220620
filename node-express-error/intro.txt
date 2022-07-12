@@ -1,0 +1,58 @@
+npm init -y -> pakage.json파일 생성
+
+const http = require('http')  를 기반으로 제공되는 웹프레임워크가 express이다
+
+npm i express --save
+--save옵션을 통해 설치된 Node모듈은 package.json 파일 내의
+dependencies 목록에 추가된다.
+
+코드가 수정될 때 마다 다시 실행이 된다.
+
+npm i --save-dev nodemon
+
+package.json 에 아래 내용 추가하고 실행할 땐 npm run server를 쳐보면 실행
+
+"scripts": {
+    "server":"nodemon render.js"
+  },
+
+미들웨어 정의
+익스프레스가 실행(node render or  node render.js or nodemon render or nodemon render.js)
+되면서 어떤 하나의 request(post 방식의 req.body json정보 읽기, 
+사용자가 입력한 값 요청)가 들어 왔을 때
+그 request가 응답이 되어 나갈(화면 출력) 때 까지 거치는 모든 함수들을 말함
+미들웨어는 여러 함수들을 거치는 구조를 가진다
+그 함수 하나하나가 미들웨어 이다.
+
+익스프레스 F/W을 활용하면 서버사이드 렌더링과 클라이언트 사이드 렌더링이 가능하다
+ -> Restful API 활용 - GET/POST 방식
+
+- javascrip - single thread - 동기처리 -> 비동기가 월등히 많은뎅.. -> 콜백함수가 이를 해결해줌
+- nodejs → multi thread
+
+웹서비스에 대한 url 디자인 패턴 - 터짐프로젝트
+응답이 완료됨 -> 오라클 서버경유, naver 서버 경유, hackernews서버 경유, youtube서버 경유
+요펑하기 위해서 get(param1, param2)
+http://localhost:3000
+http://localhost:3000/tomato
+http://localhost:3000/tomato/123
+http://localhost:3000/login?mem_id=apple&mem_pw=123
+
+<form id="" action="./login" method="get">
+
+</form>
+
+GET 방식 - 1개 app.get(”/”, function (req,res){ 실행문 - callback함수})
+              app.get("/", (req,res) => {실행문{ if(선택), for, switch } - callback함수})
+POST 방식 - 1개
+  select
+  insert
+  update
+  delete
+
+- res.setContentType(”text/html”)
+- res.setContentType(”application/json”)
+- res.json() → json포맷으로 반환해준다 → 이름도 더블쿼테이션, 값은 문자열(””)/숫자
+[] - 배열
+{} - 객체
+[{},{},{},...] -> json의 형태이다.
