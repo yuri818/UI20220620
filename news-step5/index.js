@@ -19,7 +19,7 @@ function getNewsList(){
     .then(response => response.json()) 
     .then(result => {
       const newsList = [];
-      const max = result.length / 10;
+      const max = result.length / 7;
       // 1-4와 달라진 부분 - 복잡성 줄이기
       let template = `
         <div>
@@ -34,7 +34,8 @@ function getNewsList(){
         </div>
       `;
 
-      for(let i=(store.currentPage - 1)*10 ; i < store.currentPage * 10; i++){
+      for(let i=(store.currentPage - 1)*7 ; i < store.currentPage * 7; i++){
+        if(i==30){break;} else {
         newsList.push(`
           <li>
             <a href='#${result[i].id}'>
@@ -43,6 +44,7 @@ function getNewsList(){
             (댓글 수: ${result[i].comments_count})
           </li>
         `);
+        }
       } //////////////////end of for
       // 1-4와 달라진 부분
       template = template.replace("{{__news_list__}}", newsList.join(""));
