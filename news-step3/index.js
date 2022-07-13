@@ -74,7 +74,8 @@ const requestOptions = {
       글 목록의 링크는 #이었음 - 해시값
       그러면 location.hash에 #이 들어왔음
       -> 이것으로 어떻게 참 | 거짓을 나눌 수 있지??
-      location.hash에 #만 들어오면 빈 값을 반환함
+        // 0이면 false 나머지는 모두 true
+      location.hash에 #만 들어오면 빈 값을 반환함 "" - true
       첫 진입일 때는 getNewsList를 호출하고 
       해시값이 존재하면 getNewsContent를 호출하게 한다
   */
