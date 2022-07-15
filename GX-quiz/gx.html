@@ -6,25 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TerrGYM</title>
   <link rel="stylesheet" href="./gx.css">
-  <script src="./gx.js"></script>
+  <script src="./gx.js" defer></script>
   <script src="https://kit.fontawesome.com/cccd1be026.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <section class="list">
+<!-- 헤더 시작 -->
     <header class="header">GroupExercise Preference</header>
-    <ul class="items">
-      <!-- <li class="gxList">스피닝<button class="fas fa-trash-alt icon"></button></li> -->
-      <li class="item_row">
-        <div class="item">
-          <span class="item_name">스피닝</span>
-          <button class="fas fa-trash-alt item_delete"></button>
-        </div>
-      </li>
-    </ul>
-    <footer>
-      <input type="text" name="" id="">
+<!-- 헤더 끝 -->    
+<!-- 데이터셋 시작 -->
+<ul class="items">
+  <li class="item_row">
+    <div class="item">
+      <span class="item_name">스피닝</span>
+      <button class="fas fa-trash-alt item_delete"></button>
+    </div>
+    <!-- 선 처리용으로 넣은 div박스 -->
+    <div class="item_divider"></div>
+  </li>
+</ul>
+<!-- 데이터셋 끝 -->
+<!-- 푸터 시작 -->
+    <footer class="footer">
+      <input type="text" class="footer_input">
       <button class="fas fa-plus btn_add"></button>
     </footer>
+<!-- 푸터 끝 -->  
   </section>
 </body>
 </html>
